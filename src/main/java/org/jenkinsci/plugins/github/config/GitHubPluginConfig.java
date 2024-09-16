@@ -20,7 +20,6 @@ import org.jenkinsci.main.modules.instance_identity.InstanceIdentity;
 import org.jenkinsci.plugins.github.GitHubPlugin;
 import org.jenkinsci.plugins.github.Messages;
 import org.jenkinsci.plugins.github.internal.GHPluginConfigException;
-import org.jenkinsci.plugins.github.migration.Migrator;
 import org.kohsuke.accmod.Restricted;
 import org.kohsuke.accmod.restrictions.DoNotUse;
 import org.kohsuke.github.GitHub;
@@ -61,7 +60,6 @@ import static org.jenkinsci.plugins.github.util.FluentIterableWrapper.from;
 @Extension
 public class GitHubPluginConfig extends GlobalConfiguration {
     private static final Logger LOGGER = LoggerFactory.getLogger(GitHubPluginConfig.class);
-    public static final String GITHUB_PLUGIN_CONFIGURATION_ID = "github-plugin-configuration";
 
     /**
      * Helps to avoid null in {@link GitHubPlugin#configuration()}
@@ -174,16 +172,7 @@ public class GitHubPluginConfig extends GlobalConfiguration {
     }
 
     /**
-     * To avoid long class name as id in xml tag name and config file
-     */
-    @Override
-    public String getId() {
-        return GITHUB_PLUGIN_CONFIGURATION_ID;
-    }
-
-    /**
      * @return config file with global {@link com.thoughtworks.xstream.XStream} instance
-     * with enabled aliases in {@link Migrator#enableAliases()}
      */
     @Override
     protected XmlFile getConfigFile() {

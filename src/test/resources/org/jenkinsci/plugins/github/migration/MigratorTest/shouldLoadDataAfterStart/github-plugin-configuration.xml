@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<github-plugin-configuration plugin="github@1.12.0">
+<org.jenkinsci.plugins.github.config.GitHubPluginConfig plugin="github@1.12.0">
   <configs>
     <github-server-config>
       <apiUrl>https://api.github.com</apiUrl>
@@ -13,4 +13,4 @@
     </github-server-config>
   </configs>
   <hookUrl>http://some.proxy.example.com/webhook</hookUrl>
-</github-plugin-configuration>
+</org.jenkinsci.plugins.github.config.GitHubPluginConfig>

@@ -11,7 +11,7 @@
 
     <groupId>com.coravy.hudson.plugins.github</groupId>
     <artifactId>github</artifactId>
-    <version>${revision}${changelist}</version>
+    <version>${revision}-CUSTOM</version>
     <packaging>hpi</packaging>
 
     <name>GitHub plugin</name>
