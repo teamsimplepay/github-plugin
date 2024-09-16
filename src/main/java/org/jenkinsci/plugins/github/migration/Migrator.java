@@ -7,7 +7,6 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Function;
 import jenkins.model.Jenkins;
 import org.jenkinsci.plugins.github.GitHubPlugin;
-import org.jenkinsci.plugins.github.config.GitHubPluginConfig;
 import org.jenkinsci.plugins.github.config.GitHubServerConfig;
 import org.jenkinsci.plugins.github.config.GitHubTokenCredentialsCreator;
 import org.slf4j.Logger;
@@ -97,12 +96,5 @@ public class Migrator {
      */
     public static void enableCompatibilityAliases() {
         // not used at this moment
-    }
-
-    /**
-     * Simplifies long node names in config files
-     */
-    public static void enableAliases() {
-        Jenkins.XSTREAM2.alias(GitHubPluginConfig.GITHUB_PLUGIN_CONFIGURATION_ID, GitHubPluginConfig.class);
     }
 }

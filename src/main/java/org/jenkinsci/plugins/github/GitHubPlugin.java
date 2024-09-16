@@ -29,7 +29,6 @@ public class GitHubPlugin extends Plugin {
     @Restricted(DoNotUse.class)
     public static void addXStreamAliases() {
         Migrator.enableCompatibilityAliases();
-        Migrator.enableAliases();
     }
 
     /**
